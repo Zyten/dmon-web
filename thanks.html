@@ -76,31 +76,9 @@ UTHM android, UTHM FSKTM, UTHM Realtime Dust Monitoring" />
 			<div class="contact">				
 					<div class="contact-grids">
 						<div class="contact-form">
-							<form action="http://formspree.io/hackeduser@hackermail.com" method="POST">
-								<div class="contact-form-row">
-									<div>
-										<span>Name :</span>
-										<input type="text" class="text" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-									</div>
-									<div>
-										<span>Email :</span>
-										<input type="text" class="text" name="_replyto" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-									</div>
-									<div>
-										<span>Subject :</span>
-										<input type="text" class="text" name="subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="clearfix"> </div>
-								<div class="contact-form-row2">
-									<span>Message :</span>
-									<textarea name="message"> </textarea>
-								</div>
-								<input type="hidden" name="_next" value="zyten.github.io/dmon-web/thanks.html" /> <!-- redir link-->
-								<input type="text" name="_gotcha" style="display:none" /> <!--spam prevention -->
-								<input type="submit" value="send">
-							</form>
+							<div class="alert alert-success">
+							  <strong>Success!</strong> Message has been sent. Thank you for your time.
+							</div>
 						</div>						
 					</div>
 				</div>
@@ -139,8 +117,8 @@ UTHM android, UTHM FSKTM, UTHM Realtime Dust Monitoring" />
 					<div class="clearfix"> </div>
 					<br>
 					<div class="thumbnail_container">
-					<a href="#" target="_blank"><img class="" alt="Find me on Facebook" 
-					src="images/facebook-find.png"></a>
+					<a href="#" target="_blank"><img class="" alt="Find me on LinkedIn" 
+					src="images/linkedin-find.png"></a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -165,5 +143,12 @@ UTHM android, UTHM FSKTM, UTHM Realtime Dust Monitoring" />
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 	</div>
+	<!--JS for logout timer -->
+	<script> 
+		setTimeout(function () {
+		window.location.href= 'http://zyten.github.io/dmon-web/index.html'; // the redirect goes here
+
+		},6000); // 10 seconds
+	</script> 
 </body>
 </html>

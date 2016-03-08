@@ -47,6 +47,11 @@
 			<!-- NAVBAR RIGHT -->
 			<ul class="nav navbar-nav pull-right" style="min-width: 10px; margin-top: 6px;">
 				<li class="dropdown user">
+					<a class="dropdown-toggle" href="http://zyten.github.io/dmon-web/index.html" target="_blank">
+						<span class="username"><i class="fa fa-cloud"></i> Project Page</span>
+					</a>
+				</li>
+				<li class="dropdown user">
 					<a class="dropdown-toggle" href="https://github.com/Zyten/dmon-web" target="_blank">
 						<span class="username"><i class="fa fa-github"></i> Fork me on GitHub</span>
 					</a>
@@ -83,7 +88,7 @@
 									<div class="clearfix">
 										<h3 class="content-title pull-left">UTHM</h3>
 									</div>
-									<div class="description">Actual Report, Historic and more</div>
+									<div class="description">Actual Report, Historical Data and more</div>
 								</div>
 							</div>
 						</div>
@@ -141,7 +146,9 @@
 										<div style="height: 280px;">
 											<div class="box-body font-400" style="padding-top: 0px;">
 												<h2><i class="fa fa-fire"></i> Temperature: <div id="nowTemp" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
-												<h2><i class="fa fa-cloud"></i> Humidity: <div id="nowHumidity" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2></div>
+												<h2><i class="fa fa-cloud"></i> Humidity: <div id="nowHumidity" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
+												<h2><i class="fa fa-flag"></i> Dust Density: <div id="nowWind" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -165,7 +172,7 @@
 										</div>
 									</div>
 									<div class="box-body">
-										<div id="chart_grow2" class="chart"></div>
+										<div id="chart_grow1" class="chart"></div>
 									</div>
 								</div>
 								<!-- /BOX -->
@@ -188,7 +195,7 @@
 										</div>
 									</div>
 									<div class="box-body">
-										<div id="chart_grow1" class="chart"></div>
+										<div id="chart_grow2" class="chart"></div>
 									</div>
 								</div>
 								<!-- /BOX -->
@@ -211,7 +218,7 @@
 										</div>
 									</div>
 									<div class="box-body">
-										<div id="chart_grow2" class="chart"></div>
+										<div id="chart_grow3" class="chart"></div>
 									</div>
 								</div>
 								<!-- /BOX -->
