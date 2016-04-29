@@ -41,14 +41,14 @@
   var series_2_field_number = 2;
   var series_2_read_api_key = '';
   var series_2_results = 10;
-  var series_2_color = '#d62020';
+  var series_2_color = '#00aaff';
   
   // variables for the third series
   var series_3_channel_id = 108012;
   var series_3_field_number = 3;
   var series_3_read_api_key = '';
   var series_3_results = 10;
-  var series_3_color = '#d62020';
+  var series_3_color = '#00bbcc';
 
   // chart title
   var chart_title = '';
@@ -298,7 +298,7 @@
 								<!-- BOX -->
 								<div class="box solid grey">
 									<div class="box-title">
-										<h4><i class="fa fa-bell"></i>Sensor Values	</h4>
+										<h4><i class="fa fa-bell"></i>Sensor Values</h4>
 										<div class="tools hidden-xs">
 											<span class="badge badge-green" id="last_update"></span>&nbsp;&nbsp;&nbsp;
 											<a href="javascript:;" class="collapse">
@@ -309,8 +309,8 @@
 											</a>
 										</div>
 									</div>
-									<div class="box-body"  style="height: 250px;">
-										<div style="height: 280px;">
+									<div class="box-body" style="height: 250px;">
+										<div>
 											<div class="box-body font-400" style="padding-top: 0px;">
 												<h2><i class="wi wi-thermometer"></i> Temperature: <div id="nowTemp" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
 												<h2><i class="wi wi-humidity"></i> Humidity: <div id="nowHumidity" style="text-align: right; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
@@ -341,8 +341,8 @@
 									<!--<div class="box-body">
 										<div id="chart_grow1" class="chart"></div>
 									</div>-->
-								    <div id="chart-container3">
-										<img alt="Ajax loader" src="//thingspeak.com/assets/loader-transparent.gif" style="position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" />
+								    <div id="chart-container">
+										<iframe scrolling="auto" height="300" style="width:100%; border: none; display:block; position: relative; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" src="https://api.thingspeak.com/channels/108012/charts/3?&results=15&dynamic=true&width=1050&bgcolor=#F5F6F6"></iframe>
 									</div>
 								</div>
 								<!-- /BOX -->
@@ -367,8 +367,8 @@
 									<!--<div class="box-body">
 										<div id="chart_grow2" class="chart"></div>
 									</div>-->
-									<div id="chart-container1">
-										<img alt="Ajax loader" src="//thingspeak.com/assets/loader-transparent.gif" style="position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" />
+									<div id="chart-container">
+										<iframe scrolling="auto" height="300" style="width:100%; border: none; display:block; position: relative; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" src="https://api.thingspeak.com/channels/108012/charts/1?&results=15&dynamic=true&width=500&bgcolor=#F5F6F6"></iframe>
 									</div>
 								</div>
 								<!-- /BOX -->
@@ -390,9 +390,11 @@
 											</a>
 										</div>
 									</div>
-									<div id="chart-container2">
-										<img alt="Ajax loader" src="//thingspeak.com/assets/loader-transparent.gif" style="position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" />
+									<div id="chart-container">
+									<iframe scrolling="auto" height="300" style="width:100%; border: none; display:block; position: relative; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" src="https://api.thingspeak.com/channels/108012/charts/2?&results=15&dynamic=true&width=500&bgcolor=#F5F6F6"></iframe>
 									</div>
+									
+									
 									<!--<div class="box-body">
 										<div id="chart_grow3" class="chart"></div>
 									</div>-->
@@ -400,7 +402,7 @@
 								<!-- /BOX -->
 							</div>
 							<!-- /ANIMATED CHART -->
-						</div>
+							</div>
 					    <!-- END DASHBOARD -->
 					   
 					    <!--------------------------->
@@ -427,12 +429,14 @@
 		
 	<!-- DATE RANGE PICKER -->
 	<script src="js/bootstrap-daterangepicker/moment.min.js"></script>
+
 	<!-- SLIMSCROLL -->
 	<script type="text/javascript" src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.min.js"></script>
 	<!-- SLIMSCROLL -->
 	<script type="text/javascript" src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.min.js"></script><script type="text/javascript" src="js/jQuery-slimScroll-1.3.0/slimScrollHorizontal.min.js"></script>
 	<!-- BLOCK UI -->
 	<script type="text/javascript" src="js/jQuery-BlockUI/jquery.blockUI.min.js"></script>
+
 	<!-- GAGE -->
 	<script src="js/justgage/js/raphael.2.1.0.min.js"></script>
     <script src="js/justgage/js/justgage.1.0.1.min.js"></script>
@@ -473,13 +477,37 @@
  
     function loadData() {
         // variable for the data point
-        var p;
+        var p, dust, API, temp;
      
         $.getJSON('https://api.thingspeak.com/channels/108012/field/3/last.json?apikey=MHJRONDJFO3TD3WA&callback=?', function(data) { //Thingspeak
             // get the data point
              
-            p = data.field3; //Thingspeak
+            dust = data.field3; //Thingspeak dust
+			
+			API = 0;
+
+			if(dust <= 0)
+				{API = 0;}
+			else if(dust <= 250)
+			{
+				tmp = 60;
+				for(var i=5; i <=100; i+=5)
+				{
+					if(dust <= tmp)
+					{
+						API = tmp - i;
+						break;
+					}
+					tmp += 10;
+				}
+			}
+			else
+			{
+				API = -1;
+			}
              
+			p = API; 
+			
             if (p) {
                 p = (p/1);
                 displayData(p);

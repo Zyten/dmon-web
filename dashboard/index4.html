@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Google Gauge - ThingSpeak</title>
+  </head>
+  <body>
+    <div id='chart_div'></div>
+  </body>
+</html>   
+ 
+<style type="text/css">
+  /*body { background-color: #ddd; }*/
+</style>
+ 
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script> 
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+ 
+    var chart; 
+    var charts;
+    var data;
+ 
+        google.load('visualization', '1', {packages:['gauge']});
+        google.setOnLoadCallback(initChart);
+ 
+    function displayData(point) {
+     
+        data.setValue(0, 0, 'API');
+        data.setValue(0, 1, point);
+        chart.draw(data, options);
+    }
+ 
+    function loadData() {
+        // variable for the data point
+        var p;
+     
+        $.getJSON('https://api.thingspeak.com/channels/108012/field/3/last.json?apikey=MHJRONDJFO3TD3WA&callback=?', function(data) { //Thingspeak
+            // get the data point
+             
+            p = data.field3; //Thingspeak
+             
+            if (p) {
+                p = (p/1);
+                displayData(p);
+            }
+        });
+    }
+ 
+    function initChart() {
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Label');
+        data.addColumn('number', 'Value');
+        data.addRows(1);
+             
+        chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+        options = {
+            width: 175, 
+            height: 175, 
+             
+            redFrom: 90, 
+            redTo: 110,
+             
+            yellowFrom: 80, 
+            yellowTo: 90, 
+             
+            greenFrom: 70, 
+            greenTo: 80, 
+             
+            minorTicks: 10,
+             
+            min: 30, 
+            max: 110, 
+             
+            animation: {
+                duration: 400, 
+                easing: 'out',
+            },
+        };
+     
+        loadData();
+ 
+        setInterval('loadData()', 15000);
+             
+    }
+</script>

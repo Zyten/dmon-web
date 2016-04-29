@@ -4,7 +4,11 @@
 	
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
+<<<<<<< HEAD
 	<title>Realtime D-MON | Dashboard</title>
+=======
+	<title>Realtime D-MON</title>
+>>>>>>> b7a56822f68b892dd66857fd37bf7bda1fce861c
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -452,6 +456,7 @@
 
 	<!-- /JAVASCRIPTS -->
 </body>
+<<<<<<< HEAD
 
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script> 
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
@@ -530,3 +535,6 @@
     }
 </script>
 </html>
+=======
+</html>
+>>>>>>> b7a56822f68b892dd66857fd37bf7bda1fce861c
