@@ -224,6 +224,24 @@
 	
 	<!-- PAGE -->
 	<section id="page">
+			<!-- SIDEBAR -->
+				<div id="sidebar" class="sidebar">
+					<div class="sidebar-menu nav-collapse">
+						<div class="divide-20"></div>
+											
+						<!-- SIDEBAR MENU -->
+						<ul style="margin-top: 34px;">
+							<li class="active">
+								<a href="index.html">
+								<i class="fa fa-map-marker fa-fw"></i> <span class="menu-text">UTHM</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+						</ul>
+						<!-- /SIDEBAR MENU -->
+					</div>
+				</div>
+				<!-- /SIDEBAR -->
 		<div id="main-content">
 			
 			<div class="container">
@@ -301,6 +319,9 @@
 										<h4><i class="fa fa-bell"></i>Sensor Values</h4>
 										<div class="tools hidden-xs">
 											<span class="badge badge-green" id="last_update"></span>&nbsp;&nbsp;&nbsp;
+											<a href="javascript:;" class="reload">
+												<i class="fa fa-refresh"></i>
+											</a>
 											<a href="javascript:;" class="collapse">
 												<i class="fa fa-chevron-up"></i>
 											</a>
@@ -330,6 +351,9 @@
 									<div class="box-title">
 										<h4><i class="wi wi-dust"></i>24H Dust Density Report</h4>
 										<div class="tools">
+											<a href="javascript:;" class="reload">
+												<i class="fa fa-refresh"></i>
+											</a>
 											<a href="javascript:;" class="collapse">
 												<i class="fa fa-chevron-up"></i>
 											</a>
@@ -356,6 +380,9 @@
 									<div class="box-title">
 										<h4><i class="wi wi-thermometer"></i>24H Temperature Report</h4>
 										<div class="tools">
+											<a href="javascript:;" class="reload">
+												<i class="fa fa-refresh"></i>
+											</a>
 											<a href="javascript:;" class="collapse">
 												<i class="fa fa-chevron-up"></i>
 											</a>
@@ -382,6 +409,9 @@
 									<div class="box-title">
 										<h4><i class="wi wi-humidity"></i>24H Humidity Report</h4>
 										<div class="tools">
+											<a href="javascript:;" class="reload">
+												<i class="fa fa-refresh"></i>
+											</a>
 											<a href="javascript:;" class="collapse">
 												<i class="fa fa-chevron-up"></i>
 											</a>
@@ -446,18 +476,24 @@
 	<script type="text/javascript" src="js/jQuery-Knob/js/jquery.knob.min.js"></script>
 	<!-- COOKIE -->
 	<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
-	<!-- GOOGLE MAPS -->
-	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-	<script type="text/javascript" src="js/gmaps/gmaps.min.js"></script>
 	<!-- CUSTOM SCRIPT -->
 	<script src="js/script.js"></script>
 	<script src="js/charts.js"></script>
 	<script src="js/googlemaps.js"></script>
 
+	<script src="js/corsTest.js"></script>
+	<script>
+		jQuery(document).ready(function() {		
+			App.setPage("index");  //Set current page
+			App.init(); //Initialise plugins and elements
+		});
+		$('#content').bind('resize', function(){
+
+		});
+	</script>
 	<!-- /JAVASCRIPTS -->
 </body>
 
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script> 
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 <script type='text/javascript'>
  

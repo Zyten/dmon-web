@@ -224,6 +224,24 @@
 	
 	<!-- PAGE -->
 	<section id="page">
+	<!-- SIDEBAR -->
+				<div id="sidebar" class="sidebar">
+					<div class="sidebar-menu nav-collapse">
+						<div class="divide-20"></div>
+											
+						<!-- SIDEBAR MENU -->
+						<ul style="margin-top: 34px;">
+							<li class="active">
+								<a href="index.html">
+								<i class="fa fa-map-marker fa-fw"></i> <span class="menu-text">UTHM</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+						</ul>
+						<!-- /SIDEBAR MENU -->
+					</div>
+				</div>
+				<!-- /SIDEBAR -->
 		<div id="main-content">
 			
 			<div class="container">
@@ -450,10 +468,19 @@
 	<script src="js/charts.js"></script>
 	<script src="js/googlemaps.js"></script>
 
+	<script src="js/corsTest.js"></script>
+	<script>
+		jQuery(document).ready(function() {		
+			App.setPage("index");  //Set current page
+			App.init(); //Initialise plugins and elements
+		});
+		$('#content').bind('resize', function(){
+
+		});
+	</script>
 	<!-- /JAVASCRIPTS -->
 </body>
 
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script> 
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 <script type='text/javascript'>
  
