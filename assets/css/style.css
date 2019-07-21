@@ -1241,3 +1241,22 @@ ul#downloads-list li {
 .contact-form-row div input[type="text"], .contact-form-row2 textarea {
 	background: #e7f7e7;
 }
+
+p.foot {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.8em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+@media (max-width: 480px) {
+	.content-bottom {
+		padding: 2em 0;
+	}
+
+	p.foot {
+		font-size: 1.1em;
+		font-weight: 300;
+	}
+}
