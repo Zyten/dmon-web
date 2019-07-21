@@ -2,7 +2,7 @@
 
 layout: page
 title: Contact
-permalink: /thanks/
+permalink: /thanks
 ---
 
 <div class="content">
