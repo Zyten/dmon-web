@@ -1201,14 +1201,30 @@ p.on-to{
 
 .logo {
 	margin: 1em 0.5em;
-    padding: 0.7em 1.2em;
+  padding: 0.7em 1.2em;
 }
 
-@media(max-width:400px){
+@media(max-width:400px) {
 	.logo {
 		width: auto;
 	}
 	.logo > h1 {
 		font-size: 24px;
+	}
+}
+
+.banner-in {
+	  min-height: 191px;
+}
+
+@media (max-width: 1024px) {
+	.banner-in {
+		  min-height: 191px;
+	}
+}
+
+@media (max-width: 480px) {
+	.banner-in {
+		  min-height: 91px;
 	}
 }
