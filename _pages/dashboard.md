@@ -9,14 +9,14 @@ navigation_weight: 2
 <header class="navbar clearfix" id="header">
   <div class="container">
     <div class="navbar-brand">
-      <a href="../">
+      <a href="{{ site.baseurl }}/dashboard">
         <label style="margin-left:10px; color:white; cursor: pointer">D-MON</label>
       </a>
     </div>
     <!-- NAVBAR RIGHT -->
     <ul class="nav navbar-nav pull-right" style="min-width: 10px; margin-top: 6px;">
       <li class="dropdown user">
-        <a class="dropdown-toggle" href="../">
+        <a class="dropdown-toggle" href="{{ site.baseurl }}/">
           <span class="username">
             <i class="fa fa-cloud"></i> Project Page
           </span>
@@ -40,7 +40,7 @@ navigation_weight: 2
       <div class="divide-20"></div>
       <ul style="margin-top: 34px;">
         <li class="active">
-          <a href="../dashboard">
+          <a href="{{ site.baseurl }}/dashboard">
             <i class="fa fa-map-marker fa-fw"></i> <span class="menu-text">UTHM</span>
             <span class="selected"></span>
           </a>
@@ -99,7 +99,7 @@ navigation_weight: 2
                     </div>
                   </div>
                   <div class="col-md-5" style=" height: 240px;">
-                    <img style="width: 180px; height: 200px; margin-top:15px; margin-left:15px; float: left;" src="img/apicolorref.png" />
+                    <img style="width: 180px; height: 200px; margin-top:15px; margin-left:15px; float: left;" src="assets/dashboard/img/apicolorref.png" />
                   </div>
                 </div>
               </div>
@@ -123,9 +123,9 @@ navigation_weight: 2
                 <div class="box-body"  style="height: 250px;">
                   <div style="height: 280px;">
                     <div class="box-body font-400" style="padding-top: 0px;">
-                      <h2><i class="wi wi-thermometer"></i> Temperature: <div id="nowTemp" style="text-align: left; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
-                      <h2><i class="wi wi-humidity"></i> Humidity: <div id="nowHumidity" style="text-align: left; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
-                      <h2><i class="wi wi-dust"></i> Dust Density: <div id="nowDust" style="text-align: left; width: 170px; height: 40px; float: right; background: url(img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
+                      <h2><i class="wi wi-thermometer"></i> Temperature: <div id="nowTemp" style="text-align: left; width: 170px; height: 40px; float: right; background: url(assets/dashboard/img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
+                      <h2><i class="wi wi-humidity"></i> Humidity: <div id="nowHumidity" style="text-align: left; width: 170px; height: 40px; float: right; background: url(assets/dashboard/img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
+                      <h2><i class="wi wi-dust"></i> Dust Density: <div id="nowDust" style="text-align: left; width: 170px; height: 40px; float: right; background: url(assets/dashboard/img/loaders/ajax-loader.gif) no-repeat 80% 50%; "></div></h2>
                     </div>
                   </div>
                 </div>

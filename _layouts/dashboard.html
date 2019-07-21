@@ -21,26 +21,26 @@
   <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
 
-  <link href="../assets/dashboard/css/cloud-admin.css" rel="stylesheet" type="text/css" >
-  <link href="../assets/dashboard/css/themes/graphite.css" id="skin-switcher" rel="stylesheet" type="text/css" >
-  <link href="../assets/dashboard/css/responsive.css" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/cloud-admin.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/themes/graphite.css" | prepend: site.baseurl }}" id="skin-switcher" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/responsive.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
 
-  <link href="../assets/dashboard/css/weather-icons.min.css" rel="stylesheet" type="text/css" >
-  <link href="../assets/dashboard/css/weather-icons-wind.min.css" rel="stylesheet" type="text/css" >
-  <link href="../assets/dashboard/css/animatecss/animate.min.css" rel="stylesheet" type="text/css" />
+  <link href="{{ "/assets/dashboard/css/weather-icons.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/weather-icons-wind.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/animatecss/animate.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
 
-  <link href="../assets/dashboard/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/plugins/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-  <link href="../assets/dashboard/css/custom.css" rel="stylesheet" type="text/css" >
+  <link href="{{ "/assets/dashboard/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" >
 </head>
 <body>
 
   {{ content }}
 
-  <script src="../assets/dashboard/plugins/jquery/jquery-2.0.3.min.js"></script>
-  <script src="../assets/dashboard/plugins/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
-  <script src="../assets/dashboard/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{ "/assets/dashboard/plugins/jquery/jquery-2.0.3.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/dashboard/plugins/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/dashboard/plugins/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 
   <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,12 +48,12 @@
   <![endif]-->
 
   <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-  <script type='text/javascript' src="../assets/dashboard/js/google-gauge-custom.js"></script>
+  <script type='text/javascript' src="{{ "/assets/dashboard/js/google-gauge-custom.js" | prepend: site.baseurl }}"></script>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://thingspeak.com/highcharts-3.0.8.js"></script>
   <script type="text/javascript" src="https://thingspeak.com/exporting.js"></script>
-  <script type="text/javascript" src="../assets/dashboard/js/thingspeak-custom.js"></script>
+  <script type="text/javascript" src="{{ "/assets/dashboard/js/thingspeak-custom.js" | prepend: site.baseurl }}"></script>
 
   <script>
     $(document).ready(function() {
