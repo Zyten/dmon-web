@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="container"> 
+    <div class="logo">
+      <h1><a href="{{ site.baseurl }}/">{{ site.title | upcase }}</a></h1>
+    </div>
+    <div class="top-nav">
+      <span class="menu"><img src="{{ "/assets/images/menu.png" | prepend: site.baseurl }}" alt="menu-icon"> </span>
+      <ul>
+        {% assign navigable_pages = site.pages | sort: 'navigation_weight' %}
+        {% for navigable_page in navigable_pages %}
+          {% if navigable_page.navigation_weight %}
+            <li {% if navigable_page.url == page.url %}class="active"{% endif %}>
+              <a href="{{ navigable_page.url | prepend: site.baseurl }}">{{ navigable_page.title | upcase }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <li><a href="{{ "/dashboard/index.html" | prepend: site.baseurl }}">DASHBOARD</a></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+# Site settings
+title: Realtime D-MON
+email: hello@sruban.me
+description: > # this means to ignore newlines until "baseurl:"
+  Realtime D-MON, Realtime DMON, UTHM Dust Monitoring, UTHM dust
+  UTHM android, UTHM FSKTM, UTHM Realtime Dust Monitoring
+highlighter: rouge
+url: 'https://sruban.me'
+baseurl: '/dmon-web'
+include: ['_pages']
+exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]

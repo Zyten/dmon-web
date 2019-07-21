@@ -1,0 +1,63 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="{{ site.description }}" />
+
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %}{% endif %}</title>
+
+  <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{ "/assets/css/owl.carousel.css" | prepend: site.baseurl }}" rel="stylesheet">
+
+  <link href="{{ "/assets/plugins/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+
+  <link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+  {% include header.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+  <script src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <script src="{{ "/assets/js/move-top.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/easing.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/owl.carousel.js" | prepend: site.baseurl }}"></script>
+
+  <!--[if lt IE 9]>
+    <script src="{{ "/assets/js/flot/excanvas.min.js" | prepend: site.baseurl }}"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <script>
+    $(document).ready(function() {
+      $("span.menu").click(function(){
+        $(".top-nav ul").slideToggle(500, function(){
+        });
+      });
+
+      $().UItoTop({ easingType: 'easeOutQuart' });
+
+      $("#owl-app-desc").owlCarousel({
+        items : 1,
+        lazyLoad : true,
+        autoPlay : true,
+        navigation : false,
+        navigationText :  false,
+        pagination : false,
+      });
+    });
+  </script>
+</body>
+</html>
