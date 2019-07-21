@@ -7,8 +7,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %}{% endif %}</title>
-
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicons/favicon-32x32.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicons/favicon-16x16.png" | prepend: site.baseurl }}">
@@ -23,13 +21,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %}{% endif %}</title>
+  <meta name="author" content="{{ site.author }}">
   <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
 
   <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" media="all" />
-  <link href="{{ "/assets/css/owl.carousel.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/assets/css/owl.carousel.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
 
-  <link href="{{ "/assets/plugins/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/assets/plugins/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
 
@@ -48,7 +48,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script src="{{ "/assets/js/owl.carousel.js" | prepend: site.baseurl }}"></script>
 
   <!--[if lt IE 9]>
-    <script src="{{ "/assets/js/flot/excanvas.min.js" | prepend: site.baseurl }}"></script>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
