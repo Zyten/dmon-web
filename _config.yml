@@ -2,6 +2,10 @@
 title: Realtime D-MON
 email: hello@sruban.me
 description: > # this means to ignore newlines until "baseurl:"
+  Realtime D-MON is an IOT based low-cost dust monitoring system that is 
+  accessible through the web interface as well as its companion Android app.
+  The project is an Undergraduate Final Year Project developed by Ruban Selvarajah.
+keywords: > # this means to ignore newlines until "baseurl:"
   Realtime D-MON, Realtime DMON, UTHM Dust Monitoring, UTHM dust
   UTHM android, UTHM FSKTM, UTHM Realtime Dust Monitoring
 highlighter: rouge
