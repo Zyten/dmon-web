@@ -7,11 +7,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %}{% endif %}</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicons/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicons/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/assets/favicons/site.webmanifest" | prepend: site.baseurl }}">
+  <link rel="mask-icon" href="{{ "/assets/favicons/safari-pinned-tab.svg" | prepend: site.baseurl }}" color="#38aa9b">
+  <link rel="shortcut icon" href="{{ "/assets/favicons/favicon.ico" | prepend: site.baseurl }}">
+  <meta name="apple-mobile-web-app-title" content="R-DMON">
+  <meta name="application-name" content="R-DMON">
+  <meta name="msapplication-TileColor" content="#009b86">
+  <meta name="msapplication-config" content="{{ "/assets/favicons/browserconfig.xml" | prepend: site.baseurl }}">
+  <meta name="theme-color" content="#009b86">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="{{ site.description }}" />
-
-  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %}{% endif %}</title>
 
   <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" media="all" />
   <link href="{{ "/assets/css/owl.carousel.css" | prepend: site.baseurl }}" rel="stylesheet">
