@@ -1237,3 +1237,7 @@ ul#downloads-list li {
 	display: inline-block;
 	ist-style: none;
 }
+
+.contact-form-row div input[type="text"], .contact-form-row2 textarea {
+	background: #e7f7e7;
+}
