@@ -29,8 +29,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- Core CSS - Include with every page -->
   <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
-  <!-- Page Level CSS -->
-  <link href="assets/plugins/timeline/timeline.css" rel="stylesheet" />
 </head>
 <body>
   <!--header-->
@@ -64,15 +62,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="col-md-6 banner-matter-in">
         <h1>ABOUT</h1>
       </div>
-      <div class="col-md-6 banner-side side-banner">
-        <div class="col-md-6 side">
-          <img class="img-responsive" src="assets/images/splash-small.png" alt="">
-        </div>
-        <div class="col-md-6 side">
-          <img class="img-responsive" src="assets/images/splash2-small.png" alt="">
-        </div>
-        <div class="clearfix"> </div>
-      </div>
       <div class="clearfix"> </div>
     </div>
   </div>
@@ -80,137 +69,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="content">
     <!--  page-wrapper -->
     <div id="page-wrapper">
-
-      <div class="row">
-        <!-- Page Header -->
-        <div class="col-lg-12">
-          <h1 class="page-header">Project Background</h1>
-        </div>
-        <!--End Page Header -->
+      <div class="easyhtml5video" style="position:relative; width: 100%;">
+        <video controls="controls" poster="assets/videos/rdmon-video.jpg" style="width:100%" title="RDMON_Promo_Video">
+          <source src="assets/videos/rdmon-video.m4v" type="video/mp4" />
+          <source src="assets/videos/rdmon-video.webm" type="video/webm" />
+          <source src="assets/videos/rdmon-video.ogv" type="video/ogg" />
+          <source src="assets/videos/rdmon-video.mp4" />
+          <object type="application/x-shockwave-flash" data="assets/plugins/html5video/flashfox.swf" width="1280" height="720" style="position:relative;">
+              <param name="movie" value="assets/plugins/html5video/flashfox.swf" />
+              <param name="allowFullScreen" value="true" />
+              <param name="flashVars" value="autoplay=false&controls=true&fullScreenEnabled=true&posterOnEnd=true&loop=false&poster=assets/videos/rdmon-video.jpg&src=rdmon-video.m4v" />
+              <embed src="assets/plugins/html5video/flashfox.swf" width="1280" height="720" style="position:relative;"  
+                  flashVars="autoplay=false&controls=true&fullScreenEnabled=true&posterOnEnd=true&loop=false&poster=assets/videos/rdmon-video.jpg&src=rdmon-video.m4v" 
+                  allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="https://get.adobe.com/flashplayer" />
+              <img alt=title src="assets/videos/rdmon-video.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser" />
+          </object>
+        </video>
       </div>
+      <div class="panel panel-primary" style="margin: 17px 20px 20px 20px">
+        <div class="panel-heading">
+          <i class="fa fa-arrow-down fa-fw"></i>&nbsp;Downloads
+        </div>
 
-      <div class="row">
-        <div class="col-lg-12">
-          <!--Timeline -->
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <i class="fa fa-clock-o fa-fw"></i>Timeline
-            </div>
-
-            <div class="panel-body">
-              <ul class="timeline">
-                <li>
-                  <div class="timeline-badge">
-                    <i class="fa fa-check"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                      <p>
-                        <small class="text-muted"><i class="fa fa-time"></i>11 hours ago via Twitter</small>
-                      </p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-badge warning">
-                    <i class="fa fa-credit-card"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-badge danger">
-                    <i class="fa fa-credit-card"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-badge info">
-                    <i class="fa fa-save"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                      <hr>
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                          <i class="fa fa-cog"></i>
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Action</a>
-                          </li>
-                          <li><a href="#">Another action</a>
-                          </li>
-                          <li><a href="#">Something else here</a>
-                          </li>
-                          <li class="divider"></li>
-                          <li><a href="#">Separated link</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-badge success">
-                    <i class="fa fa-thumbs-up"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Timeline Event</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
+        <div class="panel-body">
+          <div class="container">
+            <ul id="downloads-list">
+              <li>
+                <a href="assets/downloads/RDMON_Brochure.pdf">
+                  <img src="assets/images/pdf.gif" />&nbsp;Brochure&nbsp;
+                </a>
+              </li>
+              <li>
+                <a href="assets/downloads/RDMON_Poster.pdf">
+                  <img src="assets/images/pdf.gif" />&nbsp;Poster&nbsp;
+                </a>
+              </li>
+              <li>
+                <a href="assets/downloads/RDMON_Price_List.pdf">
+                  <img src="assets/images/pdf.gif" />&nbsp;Price List&nbsp;
+                </a>
+              </li>
+              <li>
+                <a href="assets/downloads/RDMON_User_Manual.pdf">
+                  <img src="assets/images/pdf.gif" />&nbsp;User Manual&nbsp;
+                </a>
+              </li>
+            </ul>
           </div>
-          <!--End Timeline -->
         </div>
       </div>
     </div>

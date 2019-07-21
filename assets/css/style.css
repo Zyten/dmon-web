@@ -1228,3 +1228,12 @@ p.on-to{
 		  min-height: 91px;
 	}
 }
+
+ul#downloads-list {
+	text-align: center;
+}
+
+ul#downloads-list li {
+	display: inline-block;
+	ist-style: none;
+}
