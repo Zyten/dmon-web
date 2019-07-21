@@ -3,7 +3,7 @@
 layout: dashboard
 title: Dashboard
 permalink: /dashboard
-navigation_weight: 4
+navigation_weight: 2
 ---
 
 <header class="navbar clearfix" id="header">
