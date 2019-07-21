@@ -3,7 +3,7 @@
 layout: page
 title: Contact
 permalink: /contact
-navigation_weight: 2
+navigation_weight: 3
 ---
 
 <div class="content">
